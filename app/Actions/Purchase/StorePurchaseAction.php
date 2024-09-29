@@ -11,7 +11,6 @@ class StorePurchaseAction{
         $purchase->items()->createMany(
             array_map(fn($item) => [
                 'product_id' => $item['id'],
-                'quantity' => $item['quantity'],
             ], $request['items'])
         );
 
