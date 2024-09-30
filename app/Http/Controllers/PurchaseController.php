@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use App\Models\Purchase;
 use Illuminate\Http\Request;
-use App\Http\Resources\PurchaseResource;
 use App\Http\Requests\Purchase\StoreRequest;
 use App\Actions\Purchase\StorePurchaseAction;
 use App\Models\Product;

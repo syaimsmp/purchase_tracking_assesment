@@ -14,12 +14,14 @@ class ImportExcel implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    protected $filePath;
+
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct($filePath)
     {
-        //
+        $this->filePath = $filePath;
     }
 
     /**
@@ -27,6 +29,6 @@ class ImportExcel implements ShouldQueue
      */
     public function handle(): void
     {
-        Excel::import(new UsersImport, storage_path('app/data.xlsx'));
+        Excel::import(new UsersImport, $this->filePath);
     }
 }
