@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
         ->only(['create', 'store', 'show']);
     
     Route::resource('user-imports', UserImportController::class)
-        ->only(['create', 'store']);
+        ->only(['index', 'create', 'store']);
 });
 
 require __DIR__.'/auth.php';

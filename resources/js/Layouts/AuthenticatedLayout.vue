@@ -67,6 +67,7 @@ const showingNavigationDropdown = ref(false);
                                         <DropdownLink :href="route('profile.edit')"> Profile </DropdownLink>
                                         <DropdownLink :href="route('purchases.create')"> Purchase </DropdownLink>
                                         <DropdownLink :href="route('user-imports.create')"> Upload Excel </DropdownLink>
+                                        <DropdownLink :href="route('user-imports.index')"> List Excel Data </DropdownLink>
                                         <DropdownLink :href="route('logout')" method="post" as="button">
                                             Log Out
                                         </DropdownLink>
